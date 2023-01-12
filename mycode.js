@@ -23,10 +23,10 @@ const tax = 1.20;
 function getPrices(taxBoolean) {
     for(let i = 0;i < dishData.length;i++ ){
         let finalPrice;
-        if (taxBoolean = true){
+        if (taxBoolean == true){
 finalPrice = dishData[i].price*tax
         }
-        else if(taxBoolean = false){
+        else if(taxBoolean == false){
             finalPrice = dishData[i].price
         }
         else{
@@ -40,20 +40,22 @@ finalPrice = dishData[i].price*tax
 // Implement getDiscount()
 function getDiscount(taxBoolean,guest) {
     getPrices(taxBoolean)
-var discount;
-    if (guest){
-        discount = 0
-     }  else if(guest < 5){
+   let condition1 = typeof(guest) == 0
+   let condtion2 = condition1 > 0 && condition < 30
+    if (condition1 && conditon2){
+     let discount = 0
+        if(guest < 5){
 discount = 5
        }
      else if(guest >= 5){
            discount = 10
        }
-       
+         console.log(`Discount is : $${discount}`)
+    }
      else{
         console.log(`the secound argument must be a nuber between 0 and 30`)
     }
-    console.log(`Discount is : $${discount}`)
+  
 }
 
 // Call getDiscount()
