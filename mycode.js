@@ -40,8 +40,8 @@ finalPrice = dishData[i].price*tax
 // Implement getDiscount()
 function getDiscount(taxBoolean,guest) {
     getPrices(taxBoolean)
-   let condition1 = typeof(guest) == 0
-   let condtion2 = condition1 > 0 && condition < 30
+   let condition1 = Number(guest)
+   let condition2 = condition1 > 0 && condition2 < 30
     if (condition1 && conditon2){
      let discount = 0
         if(guest < 5){
